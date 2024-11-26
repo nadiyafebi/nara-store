@@ -1,0 +1,223 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a[href*="Wanita"] {
+    color: #007bff; /* Warna biru */
+}
+
+nav ul li a[href*="Sale"] {
+    color: #dc3545; /* Warna merah */
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Logo berada di tengah */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    flex: 1;
+}
+
+/* Ikon berada di kanan */
+.header-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header-icons a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header-icons a:hover {
+    color: #007bff;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Sidebar Filter */
+.filter-sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-sidebar h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-sidebar a {
+    display: inline-block;
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.filter-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+.filter-sidebar ul li a:hover {
+    color: #007bff;
+}
+
+/* Product Section */
+.product-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto; /* Biarkan tinggi otomatis agar gambar proporsional */
+    max-height: 300px; /* Atur tinggi maksimum gambar */
+    object-fit: cover; /* Mengisi area dengan cara yang proporsional */
+    object-position: center; /* Pusatkan gambar */
+}
+
+.product-card h5 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    font-size: 14px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.product-card:hover {
+    transform: translateY(-5px) scale(1.05); /* Sedikit memperbesar */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Lebih mencolok */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .filter-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .header-icons {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
